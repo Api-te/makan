@@ -43,7 +43,7 @@ router.get('/baseenc', (req, res) => {
     res.sendFile(__path + '/views/base.html')
 })
 
-router.get('/profil', (req, res) => {
+router.get('/profile', (req, res) => {
     res.sendFile(__path + '/views/pages-profile.html')
 })
 
