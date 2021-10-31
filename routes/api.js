@@ -1957,8 +1957,9 @@ const { items } = await ytsd(filters1.url, { limit: 10 })
 })
 
 router.get('/ssweb', async (req, res, next) => {
-if (!req.query.url) return res.json({ status: 404, error: 'masukkan param url'})
-             let ssweb = await web.capture(url)
+    url = req.query.url
+if (!url) return res.json({ status: 404, error: 'masukkan param url'})
+             let ssweb = await web.capture(`${url}`)
                 const base64 = `${ssweb.toBuffer().toString('base64')}`
                 buffer = Buffer.from(base64, 'base64')
                res.type('png')
