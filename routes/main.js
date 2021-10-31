@@ -15,7 +15,7 @@ router.get('/docs/anime', (req, res) => {
     res.sendFile(__path + '/views/anime.html')
 })
 
-router.get('/docs/download', (req, res) => {
+router.get('/download', (req, res) => {
     res.sendFile(__path + '/views/download.html')
 })
 
