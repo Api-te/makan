@@ -1152,13 +1152,533 @@ router.get('/textmaker/roses', async (req, res, next) => {
 
 */
 
-//MAKER 2 zrapi
+/* == Text Pro == */
 
-router.get('/zrapi', async (req, res, next) => {
+// Maker 1 text
+router.get('/textpro/blackpink', async (req, res, next) => {
         text1 = req.query.text
-        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter judul"})
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
         zrapi.textpro("https://textpro.me/create-blackpink-logo-style-online-1001.html", [`${text1}`,
 ])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/textpro/waterpipe', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-3d-water-pipe-text-effects-online-1048.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro/skeleton', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-halloween-skeleton-text-effect-online-1047.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/textpro/pencil', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro/circuit', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-blue-circuit-style-text-effect-online-1043.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/textpro/fiction', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-science-fiction-text-effect-online-free-1038.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro/thunder', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-thunder-text-effect-online-881.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro/magma', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+
+router.get('/textpro/green-neon', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/green-neon-text-effect-874.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro/neon-futuristic', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+//Maker 2 text1
+router.get('/textpro2/horror', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-a-cinematic-horror-text-effect-1045.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/glitch-2', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/space-3d', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-space-3d-text-effect-online-985.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/avengers', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-3d-avengers-logo-online-974.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/steel-text', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/3d-steel-text-effect-877.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/layered-text', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-layered-text-effects-online-free-1032.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/captain-america', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-a-captain-america-text-effect-free-online-1039.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/marvel-studio', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-logo-style-marvel-studios-ver-metal-972.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/pornhub', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/textpro2/glitch', async (req, res, next) => {
+        var text1 = req.query.text,
+            text2 = req.query.text2
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        if (!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
+        
+        zrapi.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html",
+        [`${text1}`, `${text2}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+//photooxy
+router.get('/love-message', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/logo-and-text-effects/create-a-picture-of-love-message-377.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/sky-text', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/coffee-cup', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/logo-and-text-effects/put-your-text-on-a-coffee-cup--174.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/glow', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/other-design/create-metallic-text-glow-online-188.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/neon', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/flaming', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/glow-effect', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/smoke', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/flower', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/art-effects/flower-typography-text-effect-164.html",[`${text1}`])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/leaves', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+        zrapi.photooxy("https://photooxy.com/logo-and-text-effects/create-a-layered-leaves-typography-text-effect-354.html",[`${text1}`])
         .then(data => {
         var result = data;
              res.json({
