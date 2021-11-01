@@ -559,7 +559,7 @@ router.get('/textmaker', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
-             text3 = req.query.text3;
+             text3 = req.query.text3
              
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'glitch' && theme != 'google-suggestion') return res.json(loghandler.notheme)
@@ -646,7 +646,8 @@ router.get('/textmaker/game', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
-             text3 = req.query.text3;
+             text3 = req.query.text3
+             
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'pubg' && theme != 'battlefield') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -731,7 +732,8 @@ router.get('/textmaker/senja', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
-             text3 = req.query.text3;
+             text3 = req.query.text3
+        
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'coffee-cup' && theme != 'coffee-cup2') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -810,13 +812,15 @@ router.get('/textmaker/senja', async (req, res, next) => {
         }
 })
 
-
 //BEDA
 router.get('/textmaker/metallic', async (req, res, next) => {
+
         var theme = req.query.theme,
+
              text = req.query.text,
              text2 = req.query.text2,
-             text3 = req.query.text3;
+             text3 = req.query.text3
+             
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'neon' && theme != 'glow') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -899,7 +903,8 @@ router.get('/textmaker/alam', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
-             text3 = req.query.text3;
+             text3 = req.query.text3
+             
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'summer' && theme != 'flower') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -983,10 +988,11 @@ router.get('/textmaker/alam', async (req, res, next) => {
 router.get('/textmaker/random', async (req, res, next) => {
 
         var theme = req.query.theme,
+
              text = req.query.text,
              text2 = req.query.text2,
-             text3 = req.query.text3;
-
+             text3 = req.query.text3
+             
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'text-burn' && theme != 'art-quote') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -1069,8 +1075,8 @@ router.get('/textmaker/roses', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
-             text3 = req.query.text3;
-
+             text3 = req.query.text3
+             
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'wooden-boarch' && theme != 'golden') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -1959,12 +1965,17 @@ const { items } = await ytsd(filters1.url, { limit: 10 })
 router.get('/ssweb', async (req, res, next) => {
     url = req.query.url
 if (!url) return res.json({ status: 404, error: 'masukkan param url'})
-             let ssweb = await web.capture(`${url}`)
-                const base64 = `${ssweb.toBuffer().toString('base64')}`
-                buffer = Buffer.from(base64, 'base64')
-               res.type('png')
-               res.send(buffer)
-        
+    ssweb = await web.capture(`${url}`)
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
 })
 
 router.get('/fbdown', async (req, res, next) => {
