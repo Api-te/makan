@@ -1977,8 +1977,13 @@ router.get('/ssweb', async (req, res, next) => {
 if (!url) return res.json({ status: 404, error: 'masukkan param url'})
     capture({ url: `${url}` })
         .then(data => {
-        res.send('chrome.png', data.chrome)
+             res.json({
+                 data
+             })
          })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
 })
 
 router.get('/fbdown', async (req, res, next) => {
