@@ -1977,8 +1977,7 @@ router.get('/ssweb', async (req, res, next) => {
 if (!url) return res.json({ status: 404, error: 'masukkan param url'})
     capture({ url: `${url}` })
         .then(data => {
-        var result = data.chrome;
-        res.send(result)
+        res.send('chrome.png', data.chrome)
          })
 })
 
