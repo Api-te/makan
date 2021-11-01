@@ -51,6 +51,7 @@
     "discord-canvas": "^1.4.1",
     "hxz-api": "^1.0.1",
     "ytpl": "^2.0.5",
+    "zrapi": "^0.0.6",
     "web-screenshot.js": "^1.0.3",
     "@vitalets/google-translate-api": "^7.0.0",
     "g-i-s": "^2.1.6",
