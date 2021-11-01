@@ -11,7 +11,7 @@ var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 var request = require('request');
 var ggs = require('google-it');
-
+var zrapi = require("zrapi");
 var ling = require("knights-canvas");
 var ytsd = require('ytsr');
 var googleImage = require('g-i-s');
@@ -1151,6 +1151,26 @@ router.get('/textmaker/roses', async (req, res, next) => {
 })
 
 */
+
+//MAKER 2 zrapi
+
+router.get('/zrapi', async (req, res, next) => {
+        text1 = req.query.text
+        if (!text1) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter judul"})
+        zrapi.textpro("https://textpro.me/create-blackpink-logo-style-online-1001.html", [`${text1}`,
+])
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
 //ISLAMMMMMMMMMMMMMMMM
 
 router.get('/kisahnabi', async (req, res, next) => {
