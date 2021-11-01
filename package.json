@@ -56,7 +56,8 @@
     "@vitalets/google-translate-api": "^7.0.0",
     "g-i-s": "^2.1.6",
     "google-it": "^1.6.2",
-    "ytsr": "^3.5.0"
+    "ytsr": "^3.5.0",
+    "capture-screenshot": "^2.0.5"
   },
   
   "homepage": "https://github.com/YuzzuKamiyaka/yuzzu-api#readme"
