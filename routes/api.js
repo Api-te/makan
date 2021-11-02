@@ -16,6 +16,7 @@ var ling = require("knights-canvas");
 var ytsd = require('ytsr');
 var capture = require('capture-screenshot');
 var googleImage = require('g-i-s');
+var nhentai = require('nhentai');
 var web = require("web-screenshot.js");
 var TikTokScraper = require('tiktok-scraper');
 var yz = require('yuzzu-api');
@@ -23,6 +24,7 @@ var Canvas = require("discord-canvas");
 var translate = require('@vitalets/google-translate-api');
 var hx = require('hxz-api');
 var router  = express.Router();
+var api = new nhentai.API();
 
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js')
@@ -2093,6 +2095,23 @@ router.get('/instagram', async (req, res, next) => {
     if (!link) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter link"})
 
        yz.igdl(`${link}`)
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/nhentai', async (req, res, next) => {
+    g = req.query.g
+    if (!g) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter g"})
+    
+       api.fetchDoujin(`${g}`)
         .then(data => {
         var result = data;
              res.json({
