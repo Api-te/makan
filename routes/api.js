@@ -17,6 +17,7 @@ var ytsd = require('ytsr');
 var capture = require('capture-screenshot');
 var googleImage = require('g-i-s');
 var nhentai = require('nhentai');
+var Pornhub = require("pornhub-api");
 var web = require("web-screenshot.js");
 var TikTokScraper = require('tiktok-scraper');
 var yz = require('yuzzu-api');
@@ -25,6 +26,7 @@ var translate = require('@vitalets/google-translate-api');
 var hx = require('hxz-api');
 var router  = express.Router();
 var api = new nhentai.API();
+var Videos = new Pornhub.Videos()
 
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js')
@@ -2112,6 +2114,23 @@ router.get('/nhentai', async (req, res, next) => {
     if (!g) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter g"})
     
        api.fetchDoujin(`${g}`)
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'YuzzuKamiyaka',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
+router.get('/search/pornhub', async (req, res, next) => {
+    qq = req.query.query
+    if (!qq) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
+    
+       Videos.search({search: `${qq}`})
         .then(data => {
         var result = data;
              res.json({
