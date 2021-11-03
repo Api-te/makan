@@ -46,5 +46,19 @@ router.get('/baseenc', (req, res) => {
 router.get('/profile', (req, res) => {
     res.sendFile(__path + '/views/pages-profile.html')
 })
+//download=============>>>>>>>>>>><><><<<≤<<<<<<
+router.get('/instagram', (req, res) => {
+    res.sendFile(__path + '/views/ig.html')
+})
+
+router.get('/twitter', (req, res) => {
+    res.sendFile(__path + '/views/twitter.html')
+})
+
+router.get('/tik-tok', (req, res) => {
+    res.sendFile(__path + '/views/tiktok.html')
+})
+
+
 
 module.exports = router
