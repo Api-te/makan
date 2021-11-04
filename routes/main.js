@@ -59,6 +59,12 @@ router.get('/tik-tok', (req, res) => {
     res.sendFile(__path + '/views/tiktok.html')
 })
 
+router.get('/ytmp4', (req, res) => {
+    res.sendFile(__path + '/views/ytmp4.html')
+})
 
+router.get('/ytmp3', (req, res) => {
+    res.sendFile(__path + '/views/ytmp3.html')
+})
 
 module.exports = router
